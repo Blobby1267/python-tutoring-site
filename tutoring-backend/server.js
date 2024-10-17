@@ -6,11 +6,14 @@ const bodyParser = require('body-parser');
 const app = express();
 app.use(bodyParser.json());
 
+const cors = require('cors');
+app.use(cors()); // Enable CORS
+
 // MySQL connection
 const db = mysql.createConnection({
     host: 'localhost',
     user: 'root',
-    password: 'your_mysql_password',
+    password: 'Benjamin8991!',
     database: 'tutoring'
 });
 
